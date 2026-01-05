@@ -25,7 +25,8 @@ Table of contents
 font & reset css
 --------------------------------------------- 
 */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+
 /* 
 ---------------------------------------------
 reset
@@ -139,7 +140,7 @@ hgroup {
 
 html,
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -183,7 +184,7 @@ Global Styles
 */
 html,
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
 ::selection {
@@ -694,10 +695,12 @@ Header Style
     border-radius: 0px 0px 25px 25px;
     width: 100%;
   }
+
   .background-header .main-nav .nav,
   .header-area .main-nav .nav {
     background-color: #fff;
   }
+
   .background-header .main-nav .nav li a,
   .header-area .main-nav .nav li a {
     line-height: 50px;
@@ -707,6 +710,7 @@ Header Style
     background-color: #fff;
     border-radius: 0px 0px 25px 25px;
   }
+
   .background-header .main-nav .nav li,
   .header-area .main-nav .nav li {
     border-top: 1px solid #ddd;
@@ -714,57 +718,71 @@ Header Style
     height: 50px;
     border-radius: 0px 0px 25px 25px;
   }
+
   .header-area .main-nav .nav {
     height: auto;
     flex-basis: 100%;
   }
+
   .header-area .main-nav .logo {
     position: absolute;
     left: 30px;
     top: 0px;
   }
+
   .background-header .main-nav .logo {
     top: 0px;
   }
+
   .background-header .main-nav .border-button {
     top: 0px !important;
   }
+
   .header-area .main-nav .border-button {
     position: absolute;
     top: 15px;
     right: 70px;
   }
+
   .header-area.header-sticky .nav li a:hover,
   .header-area.header-sticky .nav li a.active {
     color: #ee626b !important;
     opacity: 1;
   }
+
   .header-area.header-sticky .nav li.search-icon a {
     width: 100%;
   }
+
   .header-area .nav li:last-child a {
     background-color: transparent !important;
     font-weight: 300 !important;
     text-transform: capitalize !important;
   }
+
   .header-area {
     padding: 0px 15px;
     height: 80px;
     box-shadow: none;
     text-align: center;
   }
+
   .header-area .container {
     padding: 0px;
   }
+
   .header-area .logo {
     margin-left: 0px;
   }
+
   .header-area .menu-trigger {
     display: block !important;
   }
+
   .header-area .main-nav {
     overflow: hidden;
   }
+
   .header-area .main-nav .nav {
     float: none;
     width: 100%;
@@ -775,15 +793,19 @@ Header Style
     transition: all 0s ease 0s;
     margin-left: 0px;
   }
+
   .header-area .main-nav .nav li:first-child {
     border-top: 1px solid #eee;
   }
+
   .header-area.header-sticky .nav {
     margin-top: 80px !important;
   }
+
   .background-header.header-sticky .nav {
     margin-top: 80px !important;
   }
+
   .header-area .main-nav .nav li {
     width: 100%;
     background: #fff;
@@ -1757,22 +1779,27 @@ body {
   .header-area .main-nav .logo h1 {
     line-height: 80px !important;
   }
+
   .best-deal .tabs-content .nav-link {
     font-size: 14px;
     padding: 0px 15px;
     height: 44px;
     line-height: 44px;
   }
+
   .best-deal .tabs-content ul.nav-tabs li {
     margin: 0px 5px;
   }
+
   .properties ul.properties-filter li a {
     font-size: 14px;
     padding: 10px 15px;
   }
+
   .properties ul.properties-filter li {
     margin: 5px;
   }
+
   .header-area .main-nav .nav li:last-child {
     display: none;
   }
@@ -1782,86 +1809,110 @@ body {
   .sub-header {
     display: none;
   }
+
   .header-area .main-nav .logo h1 {
     line-height: 100px;
   }
+
   .background-header .main-nav .logo h1 {
     line-height: 80px;
   }
+
   .header-area .main-nav .nav li a {
     padding-left: 3px;
     padding-right: 3px;
   }
+
   .header-area .main-nav .nav li:last-child a {
     padding-right: 15px;
   }
+
   .main-banner .item h2 {
     width: 100%;
   }
+
   .featured .section-heading {
     margin-left: 0px;
     margin-right: 0px;
     margin-top: 100px;
   }
+
   .featured .accordion {
     margin-left: 0px;
     margin-right: 0px;
   }
+
   .featured .info-table {
     margin-top: 45px;
   }
+
   .fun-facts .counter {
     margin-bottom: 45px;
   }
+
   .best-deal .section-heading {
     text-align: center;
   }
+
   .best-deal .tabs-content ul.nav-tabs {
     margin-top: 0px;
     justify-content: center;
   }
+
   .best-deal .info-table {
     margin-bottom: 45px;
   }
+
   .best-deal .tab-content img {
     padding: 0px;
   }
+
   .best-deal .tabs-content h4 {
     margin-top: 45px;
   }
+
   .properties .item h6 {
     text-align: center;
     margin-bottom: 15px;
   }
+
   .properties .item .main-button {
     text-align: center;
   }
+
   .properties .item ul li {
     margin-right: 10px;
     font-size: 13px;
   }
+
   .contact-content .phone {
     margin-right: 0px;
     margin-bottom: 20px;
   }
+
   .contact-content .email {
     margin-left: 0px;
     margin-bottom: 45px;
   }
+
   .contact-content #contact-form {
     margin-left: 0px;
   }
+
   .single-property .info-table {
     margin-left: 0px;
     margin-top: 45px;
   }
+
   .contact-page .section-heading {
     margin-right: 0px !important;
   }
+
   .contact-page #contact-form {
     margin-left: 0px;
     margin-top: 60px;
   }
+
   .best-deal .info-table ul li span {
     float: right !important;
     width: auto !important;
@@ -1873,7 +1924,468 @@ body {
     float: none;
     width: 100%;
   }
+
   .contact-page .section-heading {
     margin-right: 100px;
   }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+}
+
+.logo img {
+  width: 48px;
+  /* KÍCH THƯỚC CỐ ĐỊNH = NHAU */
+  height: 48px;
+  object-fit: contain;
+  /* KHÔNG MÉO LOGO */
+}
+
+.logo h1 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1;
+  color: #1e1e1e;
+}
+
+/* MOBILE */
+@media (max-width:768px) {
+  .logo img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .logo h1 {
+    font-size: 18px;
+  }
+}
+
+.logo-partner {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+}
+
+/* LOGO CỐ ĐỊNH – BẰNG NHAU */
+.logo-partner img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+}
+
+/* ICON HỢP TÁC */
+.partner-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #f35525;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.partner-icon i {
+  color: #fff;
+  font-size: 16px;
+}
+
+/* MOBILE */
+@media (max-width:768px) {
+  .logo-partner img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .partner-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .partner-icon i {
+    font-size: 14px;
+  }
+}
+
+.site-footer {
+  background: #839796ad;
+  color: #f1f5f9;
+  font-size: 14px;
+}
+
+.site-footer .row {
+  align-items: stretch;
+}
+
+/* CỘT FOOTER */
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* WRAP LOGO – GIỮ ĐỀU HÀNG */
+.footer-logo-wrap {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.footer-logo {
+  width: 160px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.site-footer h5 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.site-footer p {
+  line-height: 1.7;
+  margin: 0;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.footer-list i {
+  color: #facc15;
+  margin-top: 3px;
+  min-width: 16px;
+  text-align: center;
+}
+
+.footer-link {
+  color: #0334d6c9;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, .25);
+  margin-top: 32px;
+  padding-top: 16px;
+  font-size: 13px;
+}
+
+/* MOBILE */
+@media(max-width:768px) {
+  .footer-col {
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-list li {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .footer-bottom {
+    text-align: center;
+  }
+}
+
+.call-cta a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  font-weight: 600;
+  animation: pulseCall 1.6s infinite;
+}
+
+.call-cta i {
+  background: #f35525;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+/* HIỆU ỨNG NHẤP NHÁY */
+@keyframes pulseCall {
+  0% {
+    transform: scale(1)
+  }
+
+  50% {
+    transform: scale(1.06)
+  }
+
+  100% {
+    transform: scale(1)
+  }
+}
+
+/* ===== POLICY PAGE ===== */
+.policy-page {
+  background: #f8fafc;
+}
+
+.policy-box {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 48px 46px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+}
+
+/* Typography */
+.policy-box h4 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-top: 42px;
+  margin-bottom: 14px;
+  position: relative;
+}
+
+.policy-box h4::before {
+  content: "";
+  position: absolute;
+  left: -14px;
+  top: 6px;
+  width: 6px;
+  height: 70%;
+  background: linear-gradient(180deg, #f35525, #fb923c);
+  border-radius: 4px;
+}
+
+.policy-box p,
+.policy-box li {
+  font-size: 15.5px;
+  line-height: 1.85;
+  color: #334155;
+}
+
+.policy-box ul {
+  padding-left: 22px;
+  margin-top: 10px;
+}
+
+.policy-box ul li {
+  list-style: disc;
+  margin-bottom: 8px;
+}
+
+/* TRUST BADGE */
+.policy-trust {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  background: #f1f5f9;
+  padding: 20px 24px;
+  border-radius: 14px;
+  margin-bottom: 32px;
+}
+
+.policy-trust i {
+  font-size: 28px;
+  color: #16a34a;
+}
+
+.policy-trust strong {
+  color: #0f172a;
+  font-size: 16px;
+}
+
+/* TRUST BADGE */
+.policy-trust {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  background: #f1f5f9;
+  padding: 20px 24px;
+  border-radius: 14px;
+  margin-bottom: 32px;
+}
+
+.policy-trust i {
+  font-size: 28px;
+  color: #16a34a;
+}
+
+.policy-trust strong {
+  color: #0f172a;
+  font-size: 16px;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #f8fafc;
+  color: #334155;
+}
+
+.policy-page {
+  padding: 80px 0;
+}
+
+.policy-box {
+  background: #fff;
+  border-radius: 18px;
+  padding: 48px 46px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, .08);
+}
+
+.policy-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.policy-sub {
+  text-align: center;
+  font-size: 15px;
+  color: #64748b;
+  margin-bottom: 40px;
+}
+
+.policy-trust {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  background: #f1f5f9;
+  padding: 18px 22px;
+  border-radius: 14px;
+  margin-bottom: 32px;
+}
+
+.policy-trust i {
+  font-size: 26px;
+  color: #16a34a;
+}
+
+.policy-box h4 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-top: 42px;
+  margin-bottom: 14px;
+  position: relative;
+}
+
+.policy-box h4::before {
+  content: "";
+  position: absolute;
+  left: -14px;
+  top: 6px;
+  width: 6px;
+  height: 70%;
+  background: linear-gradient(180deg, #f35525, #fb923c);
+  border-radius: 4px;
+}
+
+.policy-box p,
+.policy-box li {
+  font-size: 15.5px;
+  line-height: 1.85;
+  color: #334155;
+}
+
+.policy-box ul {
+  padding-left: 22px;
+  margin-top: 10px;
+}
+
+.policy-box ul li {
+  list-style: disc;
+  margin-bottom: 8px;
+}
+
+.policy-note {
+  background: #fff7ed;
+  border-left: 5px solid #f59e0b;
+  padding: 18px 20px;
+  border-radius: 10px;
+  margin-top: 32px;
+  font-size: 15px;
+}
+
+footer {
+  background: #0f172a;
+  color: #e5e7eb;
+  padding: 26px 0;
+  margin-top: 80px;
+  font-size: 14px;
+}
+
+footer a {
+  color: #facc15;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media(max-width:768px) {
+  .policy-box {
+    padding: 32px 22px;
+  }
+
+  .policy-title {
+    font-size: 26px;
+  }
+
+  .policy-box h4 {
+    font-size: 19px;
+  }
+}
+
+/* SECTION BANNER – CAO 60% VIEWPORT */
+.main-banner .item {
+  height: 60vh;
+  min-height: 60vh;
+  width: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* FIX MỌI SLIDE CÙNG TỈ LỆ */
+.main-banner {
+  overflow: hidden;
+}
+
+/* HIỆU ỨNG MỜ + TRƯỢT KHI SCROLL */
+.fade-scroll {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-scroll.show {
+  opacity: 1;
+  transform: translateY(0);
 }
