@@ -1452,7 +1452,7 @@ Page Header Style
 */
 
 .page-heading {
-  background-image: url(../images/page-heading-bg.jpg);
+  background-image: url(../images/page-header.jpg);
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2584,4 +2584,13 @@ footer a:hover {
     white-space: normal !important;
     margin: 0 auto !important;
   }
+}
+
+/* ===== BACKGROUND TOÀN TRANG ===== */
+body {
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.267),
+      rgba(255, 255, 255, 0.397)),
+    url("../images/muidanhvong.jpg") no-repeat center center fixed;
+  background-size: cover;
 }
