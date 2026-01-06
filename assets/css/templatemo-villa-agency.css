@@ -833,11 +833,11 @@ Banner Style
 }
 
 .main-banner .item-2 {
-  background-image: url(../images/vin-cangio.jpg);
+  background-image: url(../images/muidanhvong.jpg);
 }
 
 .main-banner .item-3 {
-  background-image: url(../images/vin-olympic.jpg);
+  background-image: url(../images/vin-olympic-banner.png);
 }
 
 .main-banner .item span.category {
@@ -2388,4 +2388,54 @@ footer a:hover {
 .fade-scroll.show {
   opacity: 1;
   transform: translateY(0);
+}
+
+.main-banner .item h2{
+  font-family: 'Montserrat', 'Arial Black', 'Segoe UI', sans-serif !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.5px !important;
+}
+/* Áp dụng font Shalyne cho h2 trong main banner */
+.main-banner .item h2 {
+    font-family: 'Shalyne', 
+                 'Font Awesome 5 Free', 
+                 'Inter', 
+                 sans-serif !important;
+    font-weight: normal !important;
+    letter-spacing: 1px !important;
+    text-transform: none !important;
+    line-height: 1.2 !important;
+    margin-bottom: 20px !important;
+}
+.main-banner .item h2 {
+    font-family: 'Shalyne', 'Inter', sans-serif !important;
+    font-size: 68px !important;
+    font-weight: normal !important;
+    letter-spacing: 3px !important;
+    line-height: 1.1 !important;
+    text-transform: none !important;
+    
+    /* Gradient text nếu muốn */
+    background: linear-gradient(to right, #000000, #000000, #195ea3e8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    
+    /* Animation nhẹ */
+    animation: textGlow 3s ease-in-out infinite alternate;
+}
+
+/* Hiệu ứng glow */
+@keyframes textGlow {
+    from {
+        text-shadow: 
+            0 0 10px rgba(44, 107, 179, 0.74),
+            0 0 20px rgba(22, 90, 167, 0.767);
+    }
+    to {
+        text-shadow: 
+            0 0 20px rgb(4, 29, 36),
+            0 0 30px rgba(8, 18, 168, 0.685),
+            0 0 40px rgba(8, 38, 170, 0.747);
+    }
 }
