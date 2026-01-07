@@ -2596,11 +2596,21 @@ footer a:hover {
   }
 }
 
-/* ===== BACKGROUND TOÀN TRANG ===== */
+/* ===== DESKTOP ===== */
 body {
+  margin: 0;
   background:
-    linear-gradient(rgba(172, 210, 245, 0.336),
-      rgba(184, 212, 224, 0.342)),
-    url("../images/muidanhvong.jpg") no-repeat center center fixed;
-  background-size: cover;
+    linear-gradient(rgba(172, 210, 245, .35), rgba(184, 212, 224, .35)),
+    url("../images/muidanhvong.jpg") center / cover no-repeat fixed;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  body {
+    background:
+      linear-gradient(rgba(172, 210, 245, .35), rgba(184, 212, 224, .35)),
+      url("../images/muidanhvong-mobile.jpg") center / cover no-repeat;
+    background-attachment: scroll;
+    /* tránh vỡ & giật ảnh */
+  }
 }
