@@ -1026,6 +1026,7 @@ Featured Style
 .featured .info-table ul li h4 {
   font-size: 22px;
   font-weight: 600;
+  color: #000000;
 }
 
 .featured .info-table ul li h4 span {
@@ -2491,7 +2492,6 @@ footer a:hover {
 
   /* Heading */
   .section-heading {
-    background-color: #aaa;
     margin-bottom: 24px !important;
     text-align: left !important;
   }
