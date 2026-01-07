@@ -169,3 +169,27 @@ const observer = new IntersectionObserver(
 document.querySelectorAll(".fade-scroll").forEach((el) => {
   observer.observe(el);
 });
+
+//Send data to Google Sheets
+document
+  .getElementById("contact-form")
+  .addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    fetch(
+      "https://script.google.com/macros/s/AKfycbxova2_oqNEkV74eDnEIvlPsd4MtPjU_RK5nd4xEx98HKiYeRjqjczXukMQjIzm9W5s/exec",
+      {
+        method: "POST",
+        body: new URLSearchParams(formData),
+      }
+    )
+      .then((res) => res.json())
+      .then(() => {
+        alert("Gửi thành công!");
+        form.reset();
+      })
+      .catch(() => alert("Lỗi gửi dữ liệu"));
+  });
