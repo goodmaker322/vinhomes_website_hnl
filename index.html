@@ -650,16 +650,119 @@
                 </fieldset>
               </div>
               <div class="col-lg-12">
-                <fieldset>
-                  <button type="submit" id="form-submit" class="orange-button">
+                <div class="agree-submit">
+                  <label class="agree-box">
+                    <input type="checkbox" id="agree-terms">
+                    <span class="checkmark"></span>
+                    <span class="agree-text">
+                      Tôi đồng ý với
+                      <a href="policies-privacy.html" target="_blank">các điều khoản</a>
+                    </span>
+                  </label>
+
+                  <button type="submit" id="form-submit" class="orange-button" disabled>
                     Gửi thông tin
                   </button>
-                </fieldset>
+                </div>
               </div>
-            </div>
           </form>
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- ================= POPUP FORM ================= -->
+  <div id="contact-popup" class="contact-popup">
+    <div class="popup-overlay"></div>
+
+    <div class="popup-content">
+      <button class="popup-close" aria-label="Đóng popup">&times;</button>
+
+      <!-- HEADER -->
+      <h3 class="popup-title">Nhận bảng hàng & ưu đãi</h3>
+      <p class="popup-sub">
+        Tài liệu chính thức & ưu đãi độc quyền từ chủ đầu tư
+      </p>
+
+      <!-- MEDIA PREVIEW -->
+      <div class="popup-media">
+        <div class="media-card">
+          <img src="assets/images/sheet-icon.png" alt="Bảng hàng & báo giá">
+          <span>Bảng hàng & báo giá</span>
+        </div>
+
+        <div class="media-card">
+          <img src="assets/images/word-icon.png" alt="Chính sách bán hàng">
+          <span>Chính sách bán hàng</span>
+        </div>
+
+        <div class="media-card">
+          <img src="assets/images/gift-icon.png" alt="Ưu đãi độc quyền">
+          <span>Ưu đãi độc quyền</span>
+        </div>
+      </div>
+
+      <!-- FORM: GIỐNG 100% FORM GỐC -->
+      <form id="popup-contact-form" action="" method="post">
+        <div class="row">
+          <div class="col-lg-12">
+            <fieldset>
+              <label>Họ & tên*</label>
+              <input type="text" name="name" placeholder="Vui lòng nhập..." required>
+            </fieldset>
+          </div>
+
+          <div class="col-lg-12">
+            <fieldset>
+              <label>Email</label>
+              <input type="email" name="email" placeholder="Vui lòng nhập Email...">
+            </fieldset>
+          </div>
+
+          <div class="col-lg-12">
+            <fieldset>
+              <label>Số điện thoại*</label>
+              <input type="text" name="subject" placeholder="Vui lòng nhập số điện thoại..." required>
+            </fieldset>
+          </div>
+
+          <div class="col-lg-12">
+            <fieldset>
+              <label>Nội dung cần hỗ trợ (nếu có)</label>
+              <textarea name="message" placeholder="Để lại lời nhắn của bạn..."></textarea>
+            </fieldset>
+          </div>
+
+          <!-- AGREE + SUBMIT (GIỮ NGUYÊN LOGIC) -->
+          <div class="col-lg-12">
+            <div class="agree-submit">
+              <label class="agree-box">
+                <input type="checkbox" id="popup-agree-terms">
+                <span class="checkmark"></span>
+                <span class="agree-text">
+                  Tôi đồng ý với
+                  <a href="policies-privacy.html" target="_blank">các điều khoản</a>
+                </span>
+              </label>
+
+              <button type="submit" id="popup-form-submit" class="orange-button" disabled>
+                Gửi thông tin
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+
+    </div>
+  </div>
+  <!-- =============== END POPUP FORM =============== -->
+  <!-- ===== POPUP SUCCESS ===== -->
+  <div id="popup-success" class="popup-success">
+    <div class="success-box">
+      <div class="success-icon">✓</div>
+      <h4>Gửi thông tin thành công</h4>
+      <p>Chúng tôi sẽ liên hệ & gửi tài liệu cho bạn trong thời gian sớm nhất.</p>
+      <button id="success-close" class="success-btn">Đóng</button>
     </div>
   </div>
 
@@ -749,6 +852,22 @@
   <script src="assets/js/owl-carousel.js"></script>
   <script src="assets/js/counter.js"></script>
   <script src="assets/js/custom.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const popup = document.getElementById("contact-popup");
+      const closeBtn = popup.querySelector(".popup-close");
+      const overlay = popup.querySelector(".popup-overlay");
+
+      function closePopup() {
+        popup.style.display = "none";
+      }
+
+      closeBtn.addEventListener("click", closePopup);
+      overlay.addEventListener("click", closePopup);
+    });
+  </script>
+
 
 </body>
 

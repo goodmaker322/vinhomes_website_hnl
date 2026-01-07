@@ -170,26 +170,59 @@ document.querySelectorAll(".fade-scroll").forEach((el) => {
   observer.observe(el);
 });
 
-//Send data to Google Sheets
-document
-  .getElementById("contact-form")
-  .addEventListener("submit", function (e) {
+const SHEET_URL =
+  "https://script.google.com/macros/s/AKfycbxova2_oqNEkV74eDnEIvlPsd4MtPjU_RK5nd4xEx98HKiYeRjqjczXukMQjIzm9W5s/exec";
+
+/* ===== HÀM GỬI FORM CHUNG ===== */
+function handleSubmit(form) {
+  form.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    const form = e.target;
     const formData = new FormData(form);
 
-    fetch(
-      "https://script.google.com/macros/s/AKfycbxova2_oqNEkV74eDnEIvlPsd4MtPjU_RK5nd4xEx98HKiYeRjqjczXukMQjIzm9W5s/exec",
-      {
-        method: "POST",
-        body: new URLSearchParams(formData),
-      }
-    )
+    fetch(SHEET_URL, {
+      method: "POST",
+      body: new URLSearchParams(formData),
+    })
       .then((res) => res.json())
       .then(() => {
-        alert("Gửi thành công!");
         form.reset();
+        document.getElementById("contact-popup").style.display = "none";
+        document.getElementById("popup-success").style.display = "flex";
       })
       .catch(() => alert("Lỗi gửi dữ liệu"));
   });
+}
+
+/* FORM CHÍNH */
+handleSubmit(document.getElementById("contact-form"));
+
+/* FORM POPUP */
+handleSubmit(document.getElementById("popup-contact-form"));
+
+/* AGREE – FORM CHÍNH */
+const agree = document.getElementById("agree-terms");
+const submitBtn = document.getElementById("form-submit");
+agree.addEventListener("change", () => {
+  submitBtn.disabled = !agree.checked;
+});
+
+/* AGREE – POPUP */
+const popupAgree = document.getElementById("popup-agree-terms");
+const popupSubmit = document.getElementById("popup-form-submit");
+popupAgree.addEventListener("change", () => {
+  popupSubmit.disabled = !popupAgree.checked;
+});
+
+/* HIỆN POPUP SAU 5 GIÂY */
+setTimeout(() => {
+  document.getElementById("contact-popup").style.display = "flex";
+}, 5000);
+
+/* ĐÓNG POPUP */
+document.querySelector(".popup-close").onclick = () => {
+  document.getElementById("contact-popup").style.display = "none";
+};
+document.getElementById("success-close").onclick = () => {
+  document.getElementById("popup-success").style.display = "none";
+};
