@@ -2596,21 +2596,44 @@ footer a:hover {
   }
 }
 
-/* ===== DESKTOP ===== */
+/* RESET */
+html,
 body {
   margin: 0;
-  background:
-    linear-gradient(rgba(172, 210, 245, .35), rgba(184, 212, 224, .35)),
-    url("../images/muidanhvong.jpg") center / cover no-repeat fixed;
+  min-height: 100%;
 }
 
-/* ===== MOBILE ===== */
+/* ===== DESKTOP ===== */
+body {
+  background-image:
+    linear-gradient(rgba(172, 210, 245, .35), rgba(184, 212, 224, .35)),
+    url("../images/muidanhvong.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* ===== MOBILE – ẢNH CUỘN THEO TRANG ===== */
 @media (max-width: 768px) {
   body {
-    background:
+    background: none !important;
+    position: relative;
+  }
+
+  body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background-image:
       linear-gradient(rgba(172, 210, 245, .35), rgba(184, 212, 224, .35)),
-      url("../images/muidanhvong-mobile.jpg") center / cover no-repeat;
-    background-attachment: scroll;
-    /* tránh vỡ & giật ảnh */
+      url("../images/muidanhvong-mobile.jpg");
+
+    background-position: center top;
+    background-size: 100% auto;
+    /* đúng ảnh 9:16 – 2244x3989 */
+    background-repeat: repeat-y;
   }
 }
