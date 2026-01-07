@@ -3259,11 +3259,49 @@ body {
 }
 
 /* MOBILE */
-@media (max-width:480px) {
+@media (max-width: 480px) {
   .popup-content {
-    margin: auto;
-    border-radius: 18px 18px 0 0;
-    max-height: 60vh;
+    /* Đặt kích thước */
+    width: 70vw !important;
+    /* 70% chiều ngang viewport */
+    max-height: 80vh !important;
+    /* 80% chiều dọc viewport */
+
+    /* Căn giữa và tạo khoảng cách từ đầu trang */
+    margin: 20vh auto 0 !important;
+    /* Cách đầu trang 20% chiều cao viewport */
+
+    /* Bo góc và hiệu ứng */
+    border-radius: 18px !important;
+    /* Bo cả 4 góc */
+
+    /* Cho phép cuộn nếu nội dung dài */
+    overflow-y: auto;
+
+    /* Đảm bảo popup luôn nằm trong viewport */
+    max-width: 90vw;
+    /* Giới hạn tối đa */
+    box-sizing: border-box;
+  }
+
+  /* Nếu popup có backdrop/overlay */
+  .popup-overlay {
+    display: flex;
+    align-items: flex-start;
+    /* Căn từ đầu trang */
+    justify-content: center;
+    padding-top: 10vh;
+    /* Thêm padding phía trên */
+  }
+}
+
+/* Tùy chọn thêm: Tối ưu cho màn hình rất nhỏ */
+@media (max-width: 360px) {
+  .popup-content {
+    width: 85vw !important;
+    /* Tăng lên chút cho màn hình nhỏ */
+    margin: 15vh auto 0 !important;
+    /* Điều chỉnh khoảng cách */
   }
 }
 
