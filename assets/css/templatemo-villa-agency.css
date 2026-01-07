@@ -999,6 +999,7 @@ Featured Style
 }
 
 .featured .info-table {
+  background-color: #e9ddd99f;
   border-radius: 10px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
   padding: 35px 30px;
@@ -1029,7 +1030,7 @@ Featured Style
 
 .featured .info-table ul li h4 span {
   font-size: 15px;
-  color: #aaa;
+  color: #000000;
   font-weight: 400;
 }
 
@@ -1141,7 +1142,7 @@ Best Deal Style
 */
 
 .best-deal {
-  background-color: #fafafa;
+  background-color: #f7f0f096;
   padding: 100px 0px;
 }
 
@@ -1193,7 +1194,7 @@ Best Deal Style
   border-bottom: 1px solid #eee;
   text-align: left;
   font-size: 15px;
-  color: #aaa;
+  color: #222121;
   font-weight: 400;
 }
 
@@ -1422,20 +1423,24 @@ footer.footer-no-gap {
 
 footer {
   margin-top: 150px;
-  background-color: #1e1e1e;
+  background-color: #ffffffe3;
   min-height: 100px;
 }
 
 footer p {
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.651);
   text-align: center;
   line-height: 100px;
-  color: #fff;
+  color: #000000;
   font-size: 16px;
   font-weight: 400;
 }
 
 footer p a {
-  color: #fff;
+  color: #000000;
   transition: all 0.3s;
   position: relative;
   z-index: 3;
@@ -2013,8 +2018,8 @@ body {
 }
 
 .site-footer {
-  background: #839796ad;
-  color: #f1f5f9;
+  background: #929c9bb9;
+  color: #060607;
   font-size: 14px;
 }
 
@@ -2047,7 +2052,7 @@ body {
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 16px;
-  color: #ffffff;
+  color: #000000;
 }
 
 .site-footer p {
@@ -2056,6 +2061,10 @@ body {
 }
 
 .footer-list {
+  margin: 20px !important;
+  padding: 20px !important;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.644);
   list-style: none;
   padding: 0;
   margin: 0;
@@ -2070,14 +2079,14 @@ body {
 }
 
 .footer-list i {
-  color: #facc15;
+  color: #d44e00;
   margin-top: 3px;
   min-width: 16px;
   text-align: center;
 }
 
 .footer-link {
-  color: #0334d6c9;
+  color: #050fa0c9;
   text-decoration: none;
 }
 
@@ -2482,6 +2491,7 @@ footer a:hover {
 
   /* Heading */
   .section-heading {
+    background-color: #aaa;
     margin-bottom: 24px !important;
     text-align: left !important;
   }
@@ -2589,8 +2599,8 @@ footer a:hover {
 /* ===== BACKGROUND TOÀN TRANG ===== */
 body {
   background:
-    linear-gradient(rgba(255, 255, 255, 0.267),
-      rgba(255, 255, 255, 0.397)),
+    linear-gradient(rgba(172, 210, 245, 0.336),
+      rgba(184, 212, 224, 0.342)),
     url("../images/muidanhvong.jpg") no-repeat center center fixed;
   background-size: cover;
 }
