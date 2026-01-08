@@ -1629,10 +1629,11 @@ Single Page Style
 }
 
 .single-property .accordion-item:last-of-type .accordion-collapse {
-  border-top: 1px solid #eaeaea;
+  border-top: 1px solid #98e0f0;
 }
 
 .single-property .info-table {
+  background-color: #8cdbfaaf;
   border-radius: 10px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
   padding: 35px 30px;
@@ -1664,7 +1665,7 @@ Single Page Style
 
 .single-property .info-table ul li h4 span {
   font-size: 15px;
-  color: #aaa;
+  color: #000000;
   font-weight: 400;
 }
 
