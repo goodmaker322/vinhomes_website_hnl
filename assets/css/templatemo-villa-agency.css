@@ -3416,3 +3416,287 @@ body {
 .success-btn:hover {
   background: #d94a1f;
 }
+
+
+
+.properties-filter li a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.properties-filter li a img {
+  width: 160px;
+  height: 95px;
+  border-radius: 20px;
+}
+
+@media (max-width:768px) {
+  .properties-filter {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .properties-filter li a {
+    position: relative;
+    height: 64px;
+    padding: 10px 12px 10px 44px;
+    border-radius: 14px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  /* lớp phủ để chữ dễ đọc */
+  .properties-filter li a::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 14px;
+    background: linear-gradient(90deg,
+        rgba(0, 0, 0, .65),
+        rgba(0, 0, 0, .25));
+  }
+
+  .properties-filter li a span,
+  .properties-filter li a img {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Tất cả sản phẩm chiếm 1 hàng */
+  .properties-filter li a.is_active {
+    grid-column: 1 / -1;
+    justify-content: center;
+    padding-left: 12px;
+  }
+}
+
+/* ===== GIỮ ISOTOPE CLICK ===== */
+.properties-filter li a {
+  pointer-events: auto !important;
+  position: relative;
+}
+
+/* ===== GRID ===== */
+.properties-filter {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+  margin-bottom: 60px;
+}
+
+/* ===== CARD WRAPPER (KHÔNG ĐỤNG <a>) ===== */
+.properties-filter li a img {
+  display: block;
+  width: 100%;
+  height: 165px;
+  object-fit: cover;
+  border-radius: 18px 18px 0 0;
+}
+
+.properties-filter li a span {
+  display: block;
+  background: #fff;
+  padding: 16px 18px 18px;
+  border-radius: 0 0 18px 18px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e1e1e;
+}
+
+/* SUBTITLE */
+.properties-filter li a span::before {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+
+/* CARD EFFECT */
+.properties-filter li a {
+  display: block;
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, .12);
+  transition: .25s ease;
+}
+
+.properties-filter li a:hover {
+  transform: translateY(-6px);
+}
+
+/* ACTIVE */
+.properties-filter li a.is_active {
+  box-shadow: 0 0 0 3px #f35525, 0 18px 40px rgba(0, 0, 0, .18);
+}
+
+/* ===== MOBILE ===== */
+@media (max-width:768px) {
+  .properties-filter {
+    grid-template-columns: 1fr;
+  }
+
+  .properties-filter li a img {
+    height: 200px;
+  }
+
+  .properties-filter li a span {
+    font-size: 17px;
+  }
+}
+
+/* ===== RESET NỀN ĐEN + PADDING CŨ ===== */
+.properties ul.properties-filter li a {
+  background: transparent !important;
+  padding: 0 !important;
+  color: inherit !important;
+}
+
+/* ===== GRID FILTER ===== */
+.properties-filter {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+  margin-bottom: 60px;
+}
+
+/* ===== CARD = TOÀN BỘ LÀ VÙNG CLICK ===== */
+.properties-filter li a {
+  display: block;
+  width: 100%;
+  height: 260px;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, .12);
+  cursor: pointer;
+  transition: .25s ease;
+}
+
+.properties-filter li a:hover {
+  transform: translateY(-6px);
+}
+
+/* ===== IMAGE ===== */
+.properties-filter li a img {
+  width: 100%;
+  height: 165px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===== TEXT ===== */
+.properties-filter li a span {
+  display: block;
+  padding: 16px 18px 18px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e1e1e;
+  background: #fff;
+}
+
+/* SUB TITLE */
+.properties-filter li a span::before {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+
+/* ===== ACTIVE ===== */
+.properties-filter li a.is_active {
+  box-shadow: 0 0 0 3px #f35525, 0 18px 40px rgba(0, 0, 0, .18);
+}
+
+/* ===== MOBILE ===== */
+@media (max-width:768px) {
+  .properties-filter {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .properties-filter li a {
+    height: 290px;
+  }
+
+  .properties-filter li a img {
+    height: 200px;
+  }
+
+  .properties-filter li a span {
+    font-size: 17px;
+  }
+}
+
+/* ===== GRID FILTER – CHUẨN ===== */
+.properties-filter {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 8px !important;
+  margin-bottom: 24px !important;
+}
+
+/* ===== CARD – THU NHỎ 1/4, GIỮ TỈ LỆ ===== */
+.properties-filter li a {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  /* GIỮ TỈ LỆ CARD */
+  height: auto;
+
+  display: block;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+/* IMAGE */
+.properties-filter li a img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  display: block;
+}
+
+/* TEXT */
+.properties-filter li a span {
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* RESET DƯ KHOẢNG TRỐNG */
+.properties-filter li {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width:768px) {
+  .properties-filter {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px !important;
+    margin-bottom: 16px !important;
+  }
+
+  .properties-filter li a {
+    aspect-ratio: 16 / 9;
+  }
+
+  .properties-filter li a span {
+    font-size: 13px;
+  }
+}

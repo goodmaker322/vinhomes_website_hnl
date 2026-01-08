@@ -130,7 +130,7 @@ https://templatemo.com/tm-591-villa-agency
       <div class="row">
         <div class="col-lg-8">
           <div class="main-image">
-            <img src="assets/images/song-lap.jpg" alt="Hình ảnh minh họa">
+            <img src="assets/images/property-02.jpg" alt="Hình ảnh minh họa">
           </div>
           <div class="main-content"
             style="background-color: rgba(226, 243, 255, 0.815); padding: 20px; border-radius: 12px; margin-top: 30px;">
@@ -147,8 +147,27 @@ https://templatemo.com/tm-591-villa-agency
               Phù hợp <strong>ở thực lâu dài, nghỉ dưỡng cuối tuần</strong> và
               <strong>đầu tư giữ tài sản giá trị cao theo thời gian</strong>.
             </p>
+            <br>
+            <br>
+            <li class="call-cta">
+              <a href="tel:0914805823"
+                style="background-color: rgba(43, 72, 42, 0.405); color: black; padding: 10px 20px; border-radius: 8px;">
+                <i class="fa fa-phone"></i>
+                Nhận báo giá ngay và các chi tiết chính sách ưu đãi
+              </a>
+            </li>
           </div>
           <style>
+            .main-image img {
+              cursor: zoom-in;
+              border-radius: 12px;
+            }
+
+            .main-image img.zoomed {
+              width: 100% !important;
+              cursor: zoom-out;
+            }
+
             #imageModal img {
               max-width: 100vw;
               max-height: 90vh;
@@ -594,6 +613,12 @@ https://templatemo.com/tm-591-villa-agency
       document.getElementById('modalImage').src = src;
     }
   </script>
+  <script>
+    document.querySelector('.main-image img').addEventListener('click', function () {
+      this.classList.toggle('zoomed');
+    });
+  </script>
+
 
 
 </body>
